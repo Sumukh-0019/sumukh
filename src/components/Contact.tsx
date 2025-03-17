@@ -18,7 +18,7 @@ const Contact = () => {
           
           <div className="flex justify-center space-x-6 mb-10">
             <a 
-              href="https://telegram.org/" 
+              href="www.linkedin.com/in/sumukh-awasthi-11b773334/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="social-icon group"
