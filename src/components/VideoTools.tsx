@@ -19,9 +19,9 @@ const tools = [
     description: "Color grading and editing"
   },
   {
-    name: "CapCut",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/CapCut_logo_2022.svg/1024px-CapCut_logo_2022.svg.png",
-    description: "Mobile and desktop video editing"
+    name: "Final Cut Pro",
+    logo: "https://upload.wikimedia.org/wikipedia/en/9/9f/2015_Final_Cut_Pro_Logo.png",
+    description: "Professional video editing for Mac"
   }
 ];
 
