@@ -19,9 +19,9 @@ const tools = [
     description: "Color grading and editing"
   },
   {
-    name: "Alight Motion",
-    logo: "https://play-lh.googleusercontent.com/QHFG0ufXC_l3kk8-7aSqi5RSRFbV54ZJZzkEKBiZ5sCKrw60E-WNa3vI7CSGWNdKz_I=w240-h480-rw",
-    description: "Mobile motion graphics and effects"
+    name: "CapCut",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/CapCut_logo_2022.svg/1024px-CapCut_logo_2022.svg.png",
+    description: "Mobile and desktop video editing"
   }
 ];
 
