@@ -18,7 +18,7 @@ const Contact = () => {
           
           <div className="flex justify-center space-x-6 mb-10">
             <a 
-              href="www.linkedin.com/in/sumukh-awasthi-11b773334/" 
+              href="https://t.me/sumukh_awasthi" 
               target="_blank" 
               rel="noopener noreferrer"
               className="social-icon group"
@@ -31,7 +31,7 @@ const Contact = () => {
             </a>
             
             <a 
-              href="mailto:sumukh@example.com" 
+              href="mailto:sumukhawasthi3456@gmail.com" 
               className="social-icon group"
               aria-label="Email"
             >
@@ -42,7 +42,7 @@ const Contact = () => {
             </a>
             
             <a 
-              href="https://linkedin.com/" 
+              href="https://www.linkedin.com/in/sumukh-awasthi-11b773334" 
               target="_blank" 
               rel="noopener noreferrer"
               className="social-icon group"
