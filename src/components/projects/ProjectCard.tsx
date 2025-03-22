@@ -1,4 +1,3 @@
-
 import React from "react";
 import { ArrowRight, Upload } from "lucide-react";
 import { Project } from "@/types/project";
@@ -25,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   delay
 }) => {
   const isEditing = editingIndex === index;
-  const canUploadVideo = project.title === "Brand Commercial" || project.title === "Music Video Edit";
+  // Removed canUploadVideo logic - no longer allowing video uploads for these projects
   const hasVideo = project.videoUrl || project.youtubeUrl;
 
   return (
@@ -46,23 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {project.category}
         </div>
 
-        {/* Edit Video Button */}
-        {canUploadVideo && (
-          <div className="absolute top-4 right-4">
-            {isEditing ? (
-              <></>
-            ) : (
-              <button 
-                onClick={() => setEditingIndex(index)}
-                className="bg-gray-800/80 text-white p-2 rounded-full hover:bg-gray-900"
-              >
-                <Upload size={20} />
-              </button>
-            )}
-          </div>
-        )}
-
-        {/* Video Upload UI */}
+        {/* Video Upload UI - keeping for other project types that might use it */}
         {isEditing && (
           <VideoUploader 
             index={index}
