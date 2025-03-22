@@ -26,6 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   const isEditing = editingIndex === index;
   const canUploadVideo = project.title === "Brand Commercial" || project.title === "Music Video Edit";
+  const hasVideo = project.videoUrl || project.youtubeUrl;
 
   return (
     <div 
@@ -71,7 +72,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         )}
         
         {/* Play Video Button */}
-        {project.videoUrl && !isEditing && (
+        {hasVideo && !isEditing && (
           <VideoPlayer 
             project={project}
             index={index}

@@ -1,6 +1,7 @@
 
 import React from "react";
 import { X } from "lucide-react";
+import YouTube from "react-youtube";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Project } from "@/types/project";
 
@@ -10,8 +11,17 @@ interface VideoPlayerProps {
   onRemoveVideo: (index: number) => void;
 }
 
+// Function to extract YouTube ID from URL
+const getYouTubeID = (url: string) => {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return (match && match[2].length === 11) ? match[2] : null;
+};
+
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ project, index, onRemoveVideo }) => {
-  if (!project.videoUrl) return null;
+  if (!project.videoUrl && !project.youtubeUrl) return null;
+
+  const youtubeID = project.youtubeUrl ? getYouTubeID(project.youtubeUrl) : null;
 
   return (
     <Dialog>
@@ -22,13 +32,27 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ project, index, onRemoveVideo
       </DialogTrigger>
       <DialogContent className="max-w-4xl p-0 overflow-hidden bg-black">
         <div className="relative aspect-video">
-          <video 
-            src={project.videoUrl} 
-            controls 
-            className="w-full h-full"
-          >
-            Your browser does not support the video tag.
-          </video>
+          {project.youtubeUrl && youtubeID ? (
+            <YouTube 
+              videoId={youtubeID} 
+              opts={{
+                width: '100%',
+                height: '100%',
+                playerVars: {
+                  autoplay: 1,
+                },
+              }}
+              className="w-full h-full"
+            />
+          ) : project.videoUrl && (
+            <video 
+              src={project.videoUrl} 
+              controls 
+              className="w-full h-full"
+            >
+              Your browser does not support the video tag.
+            </video>
+          )}
         </div>
         {project.customVideo && project.fileName && (
           <div className="absolute top-4 left-4 bg-black/50 text-white py-1 px-3 rounded-full text-xs">

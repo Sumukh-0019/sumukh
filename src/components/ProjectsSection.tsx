@@ -11,13 +11,13 @@ const initialProjects: Project[] = [{
   description: "Cinematic product showcase with dynamic transitions and color grading",
   image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop",
   category: "Commercial",
-  videoUrl: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" // Sample video URL
+  youtubeUrl: "https://youtube.com/shorts/yaCLx8WF0ko?feature=share"
 }, {
   title: "Music Video Edit",
   description: "Rhythmic cuts and visual effects synchronized with beat patterns",
   image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop",
   category: "Music",
-  videoUrl: "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" // Sample video URL
+  youtubeUrl: "https://youtu.be/UWEYAi8XGco"
 }, {
   title: "Documentary Short",
   description: "Narrative-driven editing with seamless interview integration",
