@@ -1,19 +1,9 @@
 
 import React, { useEffect, useRef, useState } from "react";
-import { ArrowRight, Play, Pause, Upload, X } from "lucide-react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
-// Define the Project interface
-interface Project {
-  title: string;
-  description: string;
-  image: string;
-  category: string;
-  videoUrl?: string;
-  customVideo?: boolean;
-  fileName?: string;
-}
+import { Project } from "@/types/project";
+import ProjectCard from "./projects/ProjectCard";
 
 // Sample projects data with the proper type
 const initialProjects: Project[] = [{
@@ -124,108 +114,16 @@ const ProjectsSection = () => {
         
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div 
-              key={project.title} 
-              className="project-card glass-card overflow-hidden opacity-0" 
-              style={{
-                transitionDelay: `${index * 150}ms`
-              }}
-            >
-              <div className="relative h-60 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" 
-                  loading="lazy" 
-                />
-                <div className="absolute top-4 left-4 bg-glass-white backdrop-blur-md px-3 py-1 rounded-full text-sm font-medium">
-                  {project.category}
-                </div>
-
-                {/* Edit Video Button */}
-                {(project.title === "Brand Commercial" || project.title === "Music Video Edit") && (
-                  <div className="absolute top-4 right-4">
-                    {editingIndex === index ? (
-                      <button 
-                        onClick={() => setEditingIndex(null)}
-                        className="bg-red-500/80 text-white p-2 rounded-full hover:bg-red-600"
-                      >
-                        <X size={20} />
-                      </button>
-                    ) : (
-                      <button 
-                        onClick={() => setEditingIndex(index)}
-                        className="bg-gray-800/80 text-white p-2 rounded-full hover:bg-gray-900"
-                      >
-                        <Upload size={20} />
-                      </button>
-                    )}
-                  </div>
-                )}
-
-                {/* Video Upload UI */}
-                {editingIndex === index && (
-                  <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center p-4">
-                    <label className="cursor-pointer bg-primary text-white py-2 px-4 rounded-full hover:bg-primary/80 transition-all mb-3">
-                      <span>Upload Video</span>
-                      <input
-                        type="file"
-                        accept="video/*"
-                        className="hidden"
-                        onChange={(e) => {
-                          if (e.target.files && e.target.files[0]) {
-                            handleVideoUpload(index, e.target.files[0]);
-                          }
-                        }}
-                      />
-                    </label>
-                    <p className="text-white text-sm text-center">Upload your own video for {project.title}</p>
-                  </div>
-                )}
-                
-                {/* Play Video Button */}
-                {project.videoUrl && !editingIndex && (
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <button className="absolute bottom-4 right-4 bg-soft-black/80 text-white p-2 rounded-full hover:bg-soft-black">
-                        <Play size={20} />
-                      </button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-4xl p-0 overflow-hidden bg-black">
-                      <div className="relative aspect-video">
-                        <video 
-                          src={project.videoUrl} 
-                          controls 
-                          className="w-full h-full"
-                        >
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      {project.customVideo && project.fileName && (
-                        <div className="absolute top-4 left-4 bg-black/50 text-white py-1 px-3 rounded-full text-xs">
-                          {project.fileName}
-                        </div>
-                      )}
-                      {project.customVideo && (
-                        <button 
-                          onClick={() => removeVideo(index)}
-                          className="absolute top-4 right-12 bg-red-500/80 text-white p-1.5 rounded-full hover:bg-red-600"
-                        >
-                          <X size={16} />
-                        </button>
-                      )}
-                    </DialogContent>
-                  </Dialog>
-                )}
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-soft-black/70 mb-4">{project.description}</p>
-                <a href="#" className="inline-flex items-center text-soft-black font-medium hover:underline">
-                  View Project <ArrowRight size={16} className="ml-1" />
-                </a>
-              </div>
-            </div>
+            <ProjectCard
+              key={project.title}
+              project={project}
+              index={index}
+              editingIndex={editingIndex}
+              setEditingIndex={setEditingIndex}
+              onVideoUpload={handleVideoUpload}
+              onRemoveVideo={removeVideo}
+              delay={index * 150}
+            />
           ))}
         </div>
         
