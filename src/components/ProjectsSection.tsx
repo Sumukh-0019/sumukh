@@ -4,8 +4,19 @@ import { ArrowRight, Play, Pause, Upload, X } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 
-// Sample projects data 
-const initialProjects = [{
+// Define the Project interface
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  videoUrl?: string;
+  customVideo?: boolean;
+  fileName?: string;
+}
+
+// Sample projects data with the proper type
+const initialProjects: Project[] = [{
   title: "Brand Commercial",
   description: "Cinematic product showcase with dynamic transitions and color grading",
   image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop",
@@ -26,7 +37,7 @@ const initialProjects = [{
 
 const ProjectsSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const [projects, setProjects] = useState(initialProjects);
+  const [projects, setProjects] = useState<Project[]>(initialProjects);
   const { toast } = useToast();
   const [editingIndex, setEditingIndex] = useState<number | null>(null);
 
@@ -91,7 +102,7 @@ const ProjectsSection = () => {
   const removeVideo = (index: number) => {
     setProjects(prev => {
       const newProjects = [...prev];
-      const { videoUrl, ...rest } = newProjects[index];
+      const { videoUrl, customVideo, fileName, ...rest } = newProjects[index];
       newProjects[index] = rest;
       return newProjects;
     });
@@ -190,7 +201,7 @@ const ProjectsSection = () => {
                           Your browser does not support the video tag.
                         </video>
                       </div>
-                      {project.customVideo && (
+                      {project.customVideo && project.fileName && (
                         <div className="absolute top-4 left-4 bg-black/50 text-white py-1 px-3 rounded-full text-xs">
                           {project.fileName}
                         </div>
