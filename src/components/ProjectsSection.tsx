@@ -7,13 +7,13 @@ import ProjectCard from "./projects/ProjectCard";
 
 // Sample projects data with the proper type
 const initialProjects: Project[] = [{
-  title: "Brand Commercial",
+  title: "Introduction",
   description: "Cinematic product showcase with dynamic transitions and color grading",
   image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop",
-  category: "Commercial",
+  category: "Introductory Edit",
   youtubeUrl: "https://youtube.com/shorts/yaCLx8WF0ko?feature=share"
 }, {
-  title: "Music Video Edit",
+  title: "Did It First",
   description: "Rhythmic cuts and visual effects synchronized with beat patterns",
   image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop",
   category: "Music",
