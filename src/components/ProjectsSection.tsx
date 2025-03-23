@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -9,7 +8,7 @@ import ProjectCard from "./projects/ProjectCard";
 const initialProjects: Project[] = [{
   title: "Introduction",
   description: "Cinematic product showcase with dynamic transitions and color grading",
-  image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop",
+  image: "/lovable-uploads/5315b76b-6d54-4cf5-8e83-04d0ddc4f4cc.png",
   category: "Introductory Edit",
   youtubeUrl: "https://youtube.com/shorts/yaCLx8WF0ko?feature=share"
 }, {
