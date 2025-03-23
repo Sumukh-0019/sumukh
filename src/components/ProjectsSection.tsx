@@ -17,11 +17,6 @@ const initialProjects: Project[] = [{
   image: "/lovable-uploads/9febc6f1-6ce0-4332-b4bc-d6944e91d79f.png",
   category: "Music",
   youtubeUrl: "https://youtu.be/UWEYAi8XGco"
-}, {
-  title: "Documentary Short",
-  description: "Narrative-driven editing with seamless interview integration",
-  image: "https://images.unsplash.com/photo-1575318632721-f98d5f7825ff?q=80&w=2070&auto=format&fit=crop",
-  category: "Documentary"
 }];
 
 const ProjectsSection = () => {

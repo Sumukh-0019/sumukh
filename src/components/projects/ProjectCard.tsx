@@ -1,8 +1,10 @@
+
 import React from "react";
-import { ArrowRight, Upload } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { Project } from "@/types/project";
 import VideoPlayer from "./VideoPlayer";
 import VideoUploader from "./VideoUploader";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 
 interface ProjectCardProps {
   project: Project;
@@ -24,7 +26,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   delay
 }) => {
   const isEditing = editingIndex === index;
-  // Removed canUploadVideo logic - no longer allowing video uploads for these projects
   const hasVideo = project.videoUrl || project.youtubeUrl;
 
   return (
@@ -66,9 +67,30 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
         <p className="text-soft-black/70 mb-4">{project.description}</p>
-        <a href="#" className="inline-flex items-center text-soft-black font-medium hover:underline">
-          View Project <ArrowRight size={16} className="ml-1" />
-        </a>
+        
+        {hasVideo ? (
+          <Dialog>
+            <DialogTrigger asChild>
+              <button className="inline-flex items-center text-soft-black font-medium hover:underline">
+                View Project <ArrowRight size={16} className="ml-1" />
+              </button>
+            </DialogTrigger>
+            {/* The VideoPlayer component will render the DialogContent */}
+            <VideoPlayer 
+              project={project}
+              index={index}
+              onRemoveVideo={onRemoveVideo}
+              isViewProject={true}
+            />
+          </Dialog>
+        ) : (
+          <button 
+            className="inline-flex items-center text-soft-black font-medium hover:underline"
+            onClick={() => setEditingIndex(index)}
+          >
+            Add Video <ArrowRight size={16} className="ml-1" />
+          </button>
+        )}
       </div>
     </div>
   );
