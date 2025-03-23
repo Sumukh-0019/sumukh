@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -10,7 +11,7 @@ const initialProjects: Project[] = [{
   description: "Cinematic product showcase with dynamic transitions and color grading",
   image: "/lovable-uploads/5315b76b-6d54-4cf5-8e83-04d0ddc4f4cc.png",
   category: "Introductory Edit",
-  youtubeUrl: "https://youtube.com/shorts/yaCLx8WF0ko?feature=share"
+  youtubeUrl: "https://www.youtube.com/watch?v=yaCLx8WF0ko"
 }, {
   title: "Did It First",
   description: "Rhythmic cuts and visual effects synchronized with beat patterns",

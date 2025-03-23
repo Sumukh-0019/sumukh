@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Linkedin, Mail, Send } from "lucide-react";
+import { Youtube, Mail, Linkedin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -18,13 +18,13 @@ const Contact = () => {
           
           <div className="flex justify-center space-x-6">
             <a 
-              href="https://t.me/sumukh_awasthi" 
+              href="https://www.youtube.com/@EditWithSumukh" 
               target="_blank" 
               rel="noopener noreferrer"
               className="social-icon group"
-              aria-label="Telegram"
+              aria-label="YouTube"
             >
-              <Send 
+              <Youtube 
                 size={24} 
                 className="text-soft-black/70 group-hover:text-soft-black transition-colors duration-300" 
               />
