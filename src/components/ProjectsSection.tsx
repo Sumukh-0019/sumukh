@@ -15,7 +15,7 @@ const initialProjects: Project[] = [{
 }, {
   title: "Did It First",
   description: "Rhythmic cuts and visual effects synchronized with beat patterns",
-  image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop",
+  image: "/lovable-uploads/9febc6f1-6ce0-4332-b4bc-d6944e91d79f.png",
   category: "Music",
   youtubeUrl: "https://youtu.be/UWEYAi8XGco"
 }, {
