@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -18,6 +17,12 @@ const initialProjects: Project[] = [{
   image: "/lovable-uploads/9febc6f1-6ce0-4332-b4bc-d6944e91d79f.png",
   category: "Music",
   youtubeUrl: "https://youtu.be/UWEYAi8XGco"
+}, {
+  title: "Thank you - Tyler, The Creator",
+  description: "Simple edit using mo-graphs for visual enhancement and rhythm",
+  image: "/lovable-uploads/46d64ad7-262b-4762-84c3-8f1fd6cbc944.png",
+  category: "Music",
+  youtubeUrl: "https://youtu.be/WedPCaVlh2k"
 }];
 
 const ProjectsSection = () => {
