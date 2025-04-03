@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -23,6 +24,12 @@ const initialProjects: Project[] = [{
   image: "/lovable-uploads/46d64ad7-262b-4762-84c3-8f1fd6cbc944.png",
   category: "Music",
   youtubeUrl: "https://youtu.be/WedPCaVlh2k"
+}, {
+  title: "Flashing Lights - Kanye West",
+  description: "Just a random quick edit",
+  image: "/lovable-uploads/521fc31b-2bad-4027-b784-748a0fe809f8.png",
+  category: "Music",
+  youtubeUrl: "https://youtu.be/TOMjTeYAuPU"
 }];
 
 const ProjectsSection = () => {
