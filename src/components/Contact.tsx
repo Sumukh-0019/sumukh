@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Youtube, Mail, Linkedin } from "lucide-react";
+import { Youtube, Linkedin, Instagram } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -31,11 +31,13 @@ const Contact = () => {
             </a>
             
             <a 
-              href="mailto:sumukhawasthi3456@gmail.com" 
+              href="https://www.instagram.com/sumukh_0019" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="social-icon group"
-              aria-label="Email"
+              aria-label="Instagram"
             >
-              <Mail 
+              <Instagram 
                 size={24} 
                 className="text-soft-black/70 group-hover:text-soft-black transition-colors duration-300" 
               />
