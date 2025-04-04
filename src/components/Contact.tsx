@@ -31,7 +31,7 @@ const Contact = () => {
             </a>
             
             <a 
-              href="https://www.instagram.com/sumukh_0019" 
+              href="https://www.instagram.com/sumukh_0019/profilecard/?igsh=MTVuZmtvMGpkajdhZg%3D%3D" 
               target="_blank" 
               rel="noopener noreferrer"
               className="social-icon group"
