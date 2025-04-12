@@ -49,7 +49,10 @@ const Hero = () => {
       
       <div className="glass-panel max-w-5xl mx-auto p-12 md:p-16 relative z-10 stagger-animate opacity-0 translate-y-10 transition-all duration-1000">
         <div className="text-center">
-          <h1 ref={titleRef} className="hero-title mb-6">
+          <h1 
+            ref={titleRef} 
+            className="hero-title mb-6 animate-text-gradient bg-gradient-to-r from-[#F5F5DC] via-[#E6D2B5] to-[#F8E8C8] bg-clip-text text-transparent"
+          >
             Sumukh's Portfolio
           </h1>
           <p 
