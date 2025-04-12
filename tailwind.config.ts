@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -113,10 +114,6 @@ export default {
 				'blur-in': {
 					'0%': { filter: 'blur(12px)', opacity: '0' },
 					'100%': { filter: 'blur(0)', opacity: '1' }
-				},
-				'text-gradient': {
-					'0%, 100%': { 'background-position': '0% 50%' },
-					'50%': { 'background-position': '100% 50%' }
 				}
 			},
 			animation: {
@@ -129,8 +126,7 @@ export default {
 				'scale-in': 'scale-in 0.6s ease-out',
 				'float': 'float 3s ease-in-out infinite',
 				'text-reveal': 'text-reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
-				'blur-in': 'blur-in 1.2s cubic-bezier(0.16, 1, 0.3, 1)',
-				'text-gradient': 'text-gradient 5s ease infinite'
+				'blur-in': 'blur-in 1.2s cubic-bezier(0.16, 1, 0.3, 1)'
 			}
 		}
 	},
