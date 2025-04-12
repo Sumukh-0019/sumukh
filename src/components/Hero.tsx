@@ -41,7 +41,7 @@ const Hero = () => {
           </h1>
           <p style={{
           animationDelay: "0.5s"
-        }} className="text-xl md:text-2xl text-soft-black/80 max-w-3xl mx-auto mb-10 animate-fade-in font-semibold">EDITOR MORE THAN AN AVERAGE, LESS THAN A PRO, BUT JUST PEFECT FOR YOU :)</p>
+        }} className="text-xl md:text-2xl text-soft-black/80 max-w-3xl mx-auto mb-10 animate-fade-in font-semibold">EDITOR MORE THAN AN AVERAGE, LESS THAN A PRO, BUT JUST PERFECT FOR YOU :)</p>
           
           <a href="#tools" className="inline-flex items-center gap-2 bg-soft-black text-beige px-6 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in" style={{
           animationDelay: "0.8s"
