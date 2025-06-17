@@ -34,10 +34,10 @@ const VideoTools = () => {
     <section 
       id="tools" 
       ref={sectionRef} 
-      className="py-20 px-6 relative z-10"
+      className="py-20 px-6 relative z-10 scroll-animate"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="scroll-animate section-title text-center">Tools That I Use</h2>
+        <h2 className="section-title text-center">Tools That I Use</h2>
         
         <div className="scroll-stagger mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
           {tools.map((tool, index) => (
@@ -61,7 +61,7 @@ const VideoTools = () => {
         </div>
         
         <div className="scroll-animate mt-20 glass-panel p-8 md:p-12">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-6 animate-text-reveal">
+          <h3 className="text-2xl md:text-3xl font-semibold mb-6">
             How I Work
           </h3>
           <p className="text-lg text-soft-black/80 leading-relaxed">

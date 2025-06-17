@@ -114,7 +114,7 @@ const ProjectsSection = () => {
     <section 
       id="projects" 
       ref={sectionRef} 
-      className="py-20 px-6 relative z-10 stagger-animate opacity-0 translate-y-10 transition-all duration-1000"
+      className="py-20 px-6 relative z-10 scroll-animate"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="section-title text-center">Some Of My Projects</h2>
