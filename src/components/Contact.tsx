@@ -6,13 +6,13 @@ const Contact = () => {
   return (
     <section 
       id="contact" 
-      className="py-20 px-6 relative z-10 scroll-animate"
+      className="py-20 px-6 relative z-10 stagger-animate opacity-0 translate-y-10 transition-all duration-1000"
     >
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="section-title">Get In Touch</h2>
         
         <div className="glass-panel p-8 md:p-12">
-          <p className="text-xl text-soft-black/80 mb-8">
+          <p className="text-xl text-soft-black/80 mb-8 animate-fade-in">
             Ready to collaborate on your next video project? Connect with me through any of these platforms.
           </p>
           
