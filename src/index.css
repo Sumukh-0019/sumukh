@@ -83,10 +83,6 @@
     @apply border-border;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
-
   body {
     @apply bg-beige text-soft-black;
     font-family: 'Inter', sans-serif;
@@ -126,40 +122,4 @@
   .tool-card {
     @apply glass-card p-6 flex flex-col items-center justify-center transition-all duration-500 hover:shadow-xl hover:-translate-y-2;
   }
-
-  /* Apple-style scroll animations */
-  .scroll-animate {
-    @apply opacity-0 translate-y-16 transition-all duration-1000 ease-out;
-  }
-  
-  .scroll-animate.in-view {
-    @apply opacity-100 translate-y-0;
-  }
-  
-  .scroll-animate-fast {
-    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
-  }
-  
-  .scroll-animate-fast.in-view {
-    @apply opacity-100 translate-y-0;
-  }
-  
-  .scroll-animate-scale {
-    @apply opacity-0 scale-95 transition-all duration-800 ease-out;
-  }
-  
-  .scroll-animate-scale.in-view {
-    @apply opacity-100 scale-100;
-  }
-
-  .scroll-stagger > * {
-    @apply scroll-animate-fast;
-  }
-  
-  .scroll-stagger.in-view > *:nth-child(1) { @apply delay-0; }
-  .scroll-stagger.in-view > *:nth-child(2) { @apply delay-100; }
-  .scroll-stagger.in-view > *:nth-child(3) { @apply delay-200; }
-  .scroll-stagger.in-view > *:nth-child(4) { @apply delay-300; }
-  .scroll-stagger.in-view > *:nth-child(5) { @apply delay-500; }
-  .scroll-stagger.in-view > *:nth-child(6) { @apply delay-700; }
 }
