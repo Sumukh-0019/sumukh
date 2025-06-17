@@ -6,19 +6,10 @@ import ProjectsSection from "../components/ProjectsSection";
 import Contact from "../components/Contact";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const Index = () => {
-  // Add staggered entry animations on page load
-  useEffect(() => {
-    const sections = document.querySelectorAll('.stagger-animate');
-    
-    sections.forEach((section, index) => {
-      setTimeout(() => {
-        section.classList.add('opacity-100');
-        section.classList.remove('opacity-0', 'translate-y-10');
-      }, 300 * (index + 1));
-    });
-  }, []);
+  useScrollAnimation();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -27,8 +18,12 @@ const Index = () => {
       <main className="flex-1">
         <Hero />
         <VideoTools />
-        <ProjectsSection />
-        <Contact />
+        <div className="scroll-animate">
+          <ProjectsSection />
+        </div>
+        <div className="scroll-animate">
+          <Contact />
+        </div>
       </main>
       
       <Footer />
