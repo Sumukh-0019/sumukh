@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import Hero from "../components/Hero";
 import VideoTools from "../components/VideoTools";
+import AchievementsSection from "../components/AchievementsSection";
 import ProjectsSection from "../components/ProjectsSection";
 import Contact from "../components/Contact";
 import Navbar from "../components/Navbar";
@@ -27,6 +28,7 @@ const Index = () => {
       <main className="flex-1">
         <Hero />
         <VideoTools />
+        <AchievementsSection />
         <ProjectsSection />
         <Contact />
       </main>
