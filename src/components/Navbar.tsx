@@ -34,6 +34,7 @@ const Navbar = () => {
           <nav className="hidden md:flex space-x-8">
             <a href="#home" className="nav-link">Home</a>
             <a href="#tools" className="nav-link">Tools</a>
+            <a href="#achievements" className="nav-link">Achievements</a>
             <a href="#projects" className="nav-link">Projects</a>
             <a href="#contact" className="nav-link">Contact</a>
           </nav>
@@ -70,6 +71,13 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Tools
+          </a>
+          <a 
+            href="#achievements" 
+            className="hover:text-soft-black/70 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Achievements
           </a>
           <a 
             href="#projects" 
