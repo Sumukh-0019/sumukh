@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from "react";
-import { Award, Trophy, Medal } from "lucide-react";
+import { Award, Trophy, Medal, BookOpen, GraduationCap } from "lucide-react";
 
 const AchievementsSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -68,6 +68,24 @@ const AchievementsSection = () => {
     }
   ];
 
+  const ibmCertificates = [
+    {
+      title: "Ethical Considerations for Generative AI",
+      image: "/lovable-uploads/e7d2170c-c942-4fb7-b6a0-3ece699c613a.png"
+    }
+  ];
+
+  const udemyCertificates = [
+    {
+      title: "Generative AI in Testing: Revolutionize Your QA Processes",
+      image: "/lovable-uploads/8a7c1756-c34e-4ada-9b69-daefe36008ef.png"
+    },
+    {
+      title: "Custom ChatGPT Publishing & AI Bootcamp Masterclass",
+      image: "/lovable-uploads/4d17a1a1-21b7-4d2f-aed6-5d978e8844f5.png"
+    }
+  ];
+
   const CertificateGrid = ({ certificates, delay = 0 }: { certificates: any[], delay?: number }) => (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {certificates.map((cert, index) => (
@@ -132,6 +150,28 @@ const AchievementsSection = () => {
             </h3>
           </div>
           <CertificateGrid certificates={googleCertificates} delay={600} />
+        </div>
+
+        {/* IBM Certificates */}
+        <div className="mb-16">
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <BookOpen className="w-6 h-6 text-soft-black/70" />
+            <h3 className="text-2xl md:text-3xl font-semibold text-center">
+              IBM Certificates
+            </h3>
+          </div>
+          <CertificateGrid certificates={ibmCertificates} delay={800} />
+        </div>
+
+        {/* Udemy Certificates */}
+        <div className="mb-16">
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <GraduationCap className="w-6 h-6 text-soft-black/70" />
+            <h3 className="text-2xl md:text-3xl font-semibold text-center">
+              Udemy Certificates
+            </h3>
+          </div>
+          <CertificateGrid certificates={udemyCertificates} delay={1000} />
         </div>
       </div>
     </section>
